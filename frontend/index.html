@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopCart — Modern Shopping</title>
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font for clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <i class="fas fa-bag-shopping"></i> ShopCart
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="#">Orders</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <button class="cart-btn" id="cartToggleBtn" aria-label="Open cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Everything You Need,<br> All in One Place</h1>
+        <p>Discover top-quality gadgets and accessories at unbeatable prices. Fast shipping, easy returns.</p>
+        <a href="#products" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-circle"></div>
+        <i class="fas fa-headphones hero-icon-1"></i>
+        <i class="fas fa-keyboard hero-icon-2"></i>
+        <i class="fas fa-mouse hero-icon-3"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SECTION -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <div class="filter-sort">
+          <div class="filters" id="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="under-1000">Under ₹1,000</button>
+            <button class="filter-btn" data-filter="1000-2000">₹1,000–₹2,000</button>
+            <button class="filter-btn" data-filter="above-2000">Above ₹2,000</button>
+          </div>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Product cards will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be rendered here -->
+    </div>
+    <div class="cart-footer-drawer" id="cartFooter">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-checkout">Proceed to Checkout <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#" class="logo footer-logo"><i class="fas fa-bag-shopping"></i> ShopCart</a>
+        <p>Your one-stop shop for premium gadgets and accessories.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#">Orders</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> support@shopcart.com</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ShopCart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

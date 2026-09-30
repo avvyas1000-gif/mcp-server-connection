@@ -1,0 +1,10 @@
+[project]
+name = "shop-cart"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mysql-connector>=2.2.9",
+    "mysql-connector-python>=26.7.0",
+]
